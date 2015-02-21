@@ -610,10 +610,15 @@ void TitleScene::update( float frame )
     
 }
 
+<<<<<<< HEAD
 int TitleScene::arc4random_uniform(int max){
 
 	std::mt19937 rand2(static_cast<unsigned int>(time(nullptr)));
 	std::uniform_int_distribution<int> dist(0, (max - 1));
 	return dist(rand2);
 
+=======
+int TitleScene::arc4random_uniform(int max) {
+	return max;
+>>>>>>> branch 'Forandroid' of https://github.com/momororo/WitchRaceForAndroid
 }

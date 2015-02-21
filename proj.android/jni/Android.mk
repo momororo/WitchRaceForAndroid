@@ -10,6 +10,7 @@ LOCAL_MODULE := cocos2dcpp_shared
 
 LOCAL_MODULE_FILENAME := libcocos2dcpp
 
+<<<<<<< HEAD
 
 #wildcardが使えるのでディレクトリ以下のcppをまるっと指定
 FILE_LIST := $(wildcard $(LOCAL_PATH)/../../Classes/*.cpp)
@@ -18,8 +19,18 @@ LOCAL_SRC_FILES := hellocpp/main.cpp
 
 #ここで上記で指定したFILE_LISTをLOCAL_SRC_FILESに追加
 LOCAL_SRC_FILES += $(FILE_LIST:$(LOCAL_PATH)/%=%)
+=======
+CPP_FILES := $(shell find $(LOCAL_PATH)/../../Classes -name *.cpp)
+LOCAL_SRC_FILES := hellocpp/main.cpp
+LOCAL_SRC_FILES += $(CPP_FILES:$(LOCAL_PATH)/%=%)
+LOCAL_C_INCLUDES := $(shell find $(LOCAL_PATH)/../../Classes -type d)
 
-LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
+#LOCAL_SRC_FILES := hellocpp/main.cpp \
+                   ../../Classes/AppDelegate.cpp \
+                   ../../Classes/HelloWorldScene.cpp
+>>>>>>> branch 'Forandroid' of https://github.com/momororo/WitchRaceForAndroid
+
+#LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
 
 LOCAL_WHOLE_STATIC_LIBRARIES := cocos2dx_static
 LOCAL_WHOLE_STATIC_LIBRARIES += cocosdenshion_static
