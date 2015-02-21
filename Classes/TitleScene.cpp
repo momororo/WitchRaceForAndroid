@@ -8,6 +8,7 @@
 #include "AppCCloudPlugin.h"
 #include "ADGConnectionForIOS.h"
 #include "NendInterstitialModule.h"
+#include <random>
 //#include "NendModule.h"
 //#include "NendInterstitialModule.h"
 //#include "AppCCloudPlugin.h"
@@ -607,4 +608,12 @@ void TitleScene::setReviewBox(){
 void TitleScene::update( float frame )
 {
     
+}
+
+int TitleScene::arc4random_uniform(int max){
+
+	std::mt19937 rand2(static_cast<unsigned int>(time(nullptr)));
+	std::uniform_int_distribution<int> dist(0, (max - 1));
+	return dist(rand2);
+
 }

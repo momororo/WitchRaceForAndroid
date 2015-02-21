@@ -22,6 +22,8 @@ protected:
     
     //コールバック処理
     void startCallback(cocos2d::Ref *pSender);
+
+    int arc4random_uniform(int max);
         
     
 public:

@@ -61,6 +61,10 @@ public:
 
     //4面のみ高さ管理の変数
     int preHeightPosition;
+
+    //乱数生成メソッド(android用)
+    int arc4random_uniform(int max);
+
     
     
 
