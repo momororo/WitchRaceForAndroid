@@ -1,0 +1,96 @@
+/*
+ 
+ 
+必要な作業や特記事項等、メモしましょう。
+
+
+ 
+ 
+ 
+ 
+ 
+ /////残りタスク/////
+１、広告の実装
+２、ゲームバランスの調整
+３、やりこみ要素の追加
+４、アチーブメント等、実績システムの検討
+ 
+ 
+/////各キャラクターのフィジックポイント/////
+ 1.本体
+【キキ】　spritePoint[5]
+ Vec2(-8,-20),Vec2(-16,0),Vec2(-8,18),Vec2(13,13),Vec2(8,-18)
+ 
+【ハリーポッター】spritePoints[6]
+ Vec2(-8,-20),Vec2(-40,-5),Vec2(-20,20), Vec2(-5,22),Vec2(13,13),Vec2(15,-5)
+ 
+【空飛ぶ車】spritePoints[4]
+ Vec2(-45,-20),Vec2(-40,17),Vec2(15,22),Vec2(50,-20)
+ 
+【自分の箒に乗ったキキ】spritePoints[5]
+ Vec2(-8,-20),Vec2(-16,0),Vec2(-8,18),Vec2(13,13),Vec2(8,-18)
+ 
+【ポルコ・ロッソ】 spritePoints[7]
+ Vec2(-40,-15),Vec2(-40,-10),Vec2(18,22),Vec2(50,25),Vec2(80,-15),Vec2(60,-25),Vec2(-5,-23)
+
+ 2.箒
+【キキ】の箒 broomPoint[3]
+ Vec2(0,0), Vec2(0,40), Vec2(180,35)
+ 
+【ハリーポッター】の箒 broomPoint[4]
+ Vec2(40,15), Vec2(10,25), Vec2(40,35), Vec2(160,42)
+ 
+【空飛ぶ車】の横ボディ broomPoint[5]
+ Vec2(40,30), Vec2(25,35), Vec2(25,70), Vec2(280,70), Vec2(280,30)
+ 
+【自分の箒に乗ったキキ】の箒www broomPoint[4]
+ Vec2(23,8), Vec2(0,18), Vec2(30,28), Vec2(120,40)
+ 
+【ポルコロッソ】の横ボディ broomPoint[6]
+ Vec2(60,40), Vec2(25,60), Vec2(65,95), Vec2(80,95), Vec2(100,60),Vec2(100,32)
+
+ 
+ 
+ 
+/////UserDefaultに記録する変数の説明/////
+(int)cleaStory
+    どこまでクリア済か記録する変数
+(int)selectStory
+    ステージセレクトで選択したステージを記録する変数
+    BackGround、Enemyクラスでの配置の分岐や、クリア後の処理に使用
+(int)clearCountFor0~4
+    各ステージのクリア回数
+
+    ※clearStory、selectStoryの中身の値、clearCountFor(x)←の値については
+    0 = stage1、 1 = stage2 と数が1つずれることに注意が必要
+ 
+ (int)playCountFor0~4
+ 各ステージのプレイ回数
+
+ 
+(bool)characterFlag0〜5
+    キャラクターの使用可能フラグ
+ 
+(int)selectCharacter
+    使用キャラクターを管理
+ 
+(int)playPoint
+    プレイポイント
+ 
+/Parseのデータベース設計
+ user:ユーザー識別子
+ playCountFor0〜4:各ステージのプレイ回数
+ clearCountFor0〜4:各ステージのクリア回数
+ clearStory:どこまでクリアしたか
+ playPoint:プレイポイント
+ twitterPoint:ツイッターのつぶやき数
+ 
+
+
+
+実績解放をnewとかそんなのでお知らせしたかったら
+１、実績が解放されているか否か
+    →trueなら普通に表示
+    →falseならクリア回数等の条件を確認
+        →条件を満たしている場合、newみたいにして開放して、フラグをオン
+        →満たしていない場合はそのまんま
