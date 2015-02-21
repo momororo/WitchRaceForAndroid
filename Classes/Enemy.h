@@ -27,9 +27,7 @@ private:
     
     //コンストラクタ
     Enemy();
-    
-    int arc4random_uniform(int max);
-    
+
 public:
     
     

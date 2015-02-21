@@ -1511,7 +1511,6 @@ Sprite* Enemy::addEnemyParts4(int widthAndHeight){
     
 }
 
-<<<<<<< HEAD
 int Enemy::arc4random_uniform(int max){
 
 	std::mt19937 rand2(static_cast<unsigned int>(time(nullptr)));
@@ -1519,9 +1518,3 @@ int Enemy::arc4random_uniform(int max){
 	return dist(rand2);
 
 }
-
-=======
-int Enemy::arc4random_uniform(int max) {
-	return max;
-}
->>>>>>> branch 'Forandroid' of https://github.com/momororo/WitchRaceForAndroid

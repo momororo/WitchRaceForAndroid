@@ -25,7 +25,6 @@ protected:
 
     int arc4random_uniform(int max);
         
-    int arc4random_uniform(int max);
     
 public:
     
