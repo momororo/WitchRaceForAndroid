@@ -35,4 +35,4 @@ Pods/*
 #.cproject
 
 #JAVA
-*.class
+#*.class
