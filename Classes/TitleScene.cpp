@@ -6,7 +6,7 @@
 #include "NativeLauncher.h"
 #include "SelectCharacterScene.h"
 #include "AppCCloudPlugin.h"
-#include "ADGConnectionForIOS.h"
+#include "ADGConnectionForAndroid.h"
 #include "NendInterstitialModule.h"
 #include <random>
 //#include "NendModule.h"
@@ -87,9 +87,9 @@ bool TitleScene::init(){
     
     //広告(appBank SSP) y座標をselfframe.height/2にしているが、理由は不明
     //テスト
-  //ADGConnectionForIOS::initADG((char*)"10723", (char*)"SP", 0, selfFrame.height/2 + 50, NULL);
+    ADGConnectionForAndroid::initADG((char*)"10724" , (char*)"SP" , (char*)"CENTER" , (char*)"TOP");
     //本番
-    ADGConnectionForIOS::initADG((char*)"20338 ", (char*)"SP", 0, selfFrame.height/2 + 50, NULL);
+    //ADGConnectionForAndroid::initADG((char*)"20338 ", (char*)"SP", 0, selfFrame.height/2 + 50, NULL);
     //終
     
 
@@ -280,7 +280,7 @@ void TitleScene::setRankingBt(){
         //ボタン効果音
         SimpleAudioEngine::getInstance()->playEffect("button70.mp3");
         //ランキング表示
-        NativeLauncher::openRanking();
+        //NativeLauncher::openRanking();
         
         
     });

@@ -4,7 +4,7 @@
 #include "NendInterstitialModule.h"
 #include "NativeLauncher.h"
 #include "AppCCloudPlugin.h"
-#include "ADGConnectionForIOS.h"
+#include "ADGConnectionForAndroid.h"
 USING_NS_CC;
 
 AppDelegate::AppDelegate() {
@@ -50,7 +50,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     
 //GameCenterへのログイン
-    NativeLauncher::loginGameCenter();
+    //NativeLauncher::loginGameCenter();
 
     
     
@@ -91,7 +91,7 @@ void AppDelegate::applicationDidEnterBackground() {
 void AppDelegate::applicationWillEnterForeground() {
     Director::getInstance()->startAnimation();
     
-    ADGConnectionForIOS::showADG();
+    ADGConnectionForAndroid::showADG();
 
     // if you use SimpleAudioEngine, it must resume here
     CocosDenshion::SimpleAudioEngine::getInstance()->resumeBackgroundMusic();

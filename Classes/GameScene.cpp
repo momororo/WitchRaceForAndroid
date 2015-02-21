@@ -487,7 +487,7 @@ void GameScene::makeGameClear(){
     
     
     //ゲームセンターにスコアを贈ろう
-    NativeLauncher::postHighScore("WitchRacePointRanking", playPoint);
+    //NativeLauncher::postHighScore("WitchRacePointRanking", playPoint);
     
     
 //終
