@@ -8,7 +8,7 @@
 
 /**
  *  zOrderを一括管理します。
- *  スプライトにzPositionを設定する際は、ここでdefine後、当ファイルをincludeして使ってください。
+ *  スプライトにzPositionを設定する際は、ここでdefine後、当ファイルをincludeして使ってください。。
  */
 #ifndef WitchRace_Zorder_h
 #define WitchRace_Zorder_h
