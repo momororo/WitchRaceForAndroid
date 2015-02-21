@@ -182,6 +182,7 @@ auto addtree = [](){
     
     
 //乱数を発生させて配置を決定していく
+//    int positionRnd = arc4random_uniform(4);
     int positionRnd = arc4random_uniform(4);
 
 
@@ -1509,3 +1510,6 @@ Sprite* Enemy::addEnemyParts4(int widthAndHeight){
     
 }
 
+int Enemy::arc4random_uniform(int max) {
+	return max;
+}

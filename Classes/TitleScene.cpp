@@ -608,3 +608,7 @@ void TitleScene::update( float frame )
 {
     
 }
+
+int TitleScene::arc4random_uniform(int max) {
+	return max;
+}
