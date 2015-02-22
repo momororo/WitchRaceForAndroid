@@ -3,6 +3,7 @@
 	<name>WitchRace</name>
 	<comment></comment>
 	<projects>
+		<project>google-play-services_lib</project>
 		<project>libcocos2dx</project>
 	</projects>
 	<buildSpec>
