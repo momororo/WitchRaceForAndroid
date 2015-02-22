@@ -24,15 +24,15 @@ Pods/*
 .idea/*
 
 #cocos2d-x
-#libs/
-#bin/
-#obj/
-#assets/
-#gen/
-#out/
-#.classpath
-#.project
-#.cproject
+libs/
+bin/
+obj/
+assets/
+gen/
+out/
+.classpath
+.project
+.cproject
 
 #JAVA
 #*.class
