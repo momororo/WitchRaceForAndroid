@@ -30,9 +30,15 @@ import net.nend.NendModule.NendInterstitialModule;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
 
+import com.kayac.lobi.sdk.LobiCore;
+import com.kskkbys.rate.RateThisApp;
+
 import android.content.Context;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.view.KeyEvent;
+
+
 
 public class AppActivity extends Cocos2dxActivity {
 	private static Context sContext = null;
@@ -40,12 +46,29 @@ public class AppActivity extends Cocos2dxActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+		StrictMode.setThreadPolicy(policy); 
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-
+		
 		sContext = this;
+		LobiCore.setup(getContext());
 		setBackKeySelected(false);
+		
 	}
+	
+	
+
+	@Override
+	protected void onStart() {
+		super.onStart();
+		
+		//レビュー表示テスト
+//		RateThisApp.onStart(getContext());
+//		RateThisApp.showRateDialog(getContext());
+	}
+
+
 
 	public static Context getContext() {
 		return sContext;

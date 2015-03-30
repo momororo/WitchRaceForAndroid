@@ -29,7 +29,8 @@ public:
 
     //キャラクターフラグ
     int selectCharacter;
-    
+    //ボタンイベントの宣言
+    void onKeyPressed(EventKeyboard::KeyCode keyCode, Event* event);
 
     //タップイベントの宣言
     bool onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event);

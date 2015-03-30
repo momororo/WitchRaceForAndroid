@@ -62,7 +62,14 @@
   /Users/syunpeihayasi/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/assert.h \
   /Users/syunpeihayasi/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/atomic \
   /Users/syunpeihayasi/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/__undef_min_max \
-  /Users/syunpeihayasi/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/stdexcept
+  /Users/syunpeihayasi/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/stdexcept \
+  /Users/syunpeihayasi/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/jni.h \
+  jni/../../cocos2d/cocos/./platform/android/jni/JniHelper.h \
+  jni/../../cocos2d/cocos/./base/CCPlatformMacros.h \
+  jni/../../cocos2d/cocos/./base/ccConfig.h \
+  jni/../../cocos2d/cocos/./base/CCPlatformConfig.h \
+  jni/../../cocos2d/cocos/./platform/android/CCPlatformDefine.h \
+  /Users/syunpeihayasi/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/android/log.h
 
 jni/../../Classes/NativeLauncher.h:
 
@@ -189,3 +196,17 @@ jni/../../Classes/NativeLauncher.h:
 /Users/syunpeihayasi/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/__undef_min_max:
 
 /Users/syunpeihayasi/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/stdexcept:
+
+/Users/syunpeihayasi/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/jni.h:
+
+jni/../../cocos2d/cocos/./platform/android/jni/JniHelper.h:
+
+jni/../../cocos2d/cocos/./base/CCPlatformMacros.h:
+
+jni/../../cocos2d/cocos/./base/ccConfig.h:
+
+jni/../../cocos2d/cocos/./base/CCPlatformConfig.h:
+
+jni/../../cocos2d/cocos/./platform/android/CCPlatformDefine.h:
+
+/Users/syunpeihayasi/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/android/log.h:

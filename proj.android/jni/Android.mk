@@ -50,3 +50,5 @@ $(call import-module,editor-support/spine)
 # $(call import-module,editor-support/cocostudio)
 # $(call import-module,network)
 # $(call import-module,extensions)
+
+APP_ABI := armeabi armeabi-v7a

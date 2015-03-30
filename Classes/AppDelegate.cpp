@@ -50,7 +50,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     
 //GameCenterへのログイン
-    //NativeLauncher::loginGameCenter();
+    NativeLauncher::loginGameCenter();
 
     
     

@@ -24,6 +24,9 @@ public:
     //twitter
     static void openTweetDialog(const char* $tweet);
 
+    static void debugLog(const char *tag, const char *msg);
+    static void debugError(const char *tag, const char *msg);
+    static int getRandom(int max);
 };
 
 #endif

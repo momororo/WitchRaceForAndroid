@@ -317,6 +317,7 @@
   jni/../../cocos2d/cocos/./deprecated/CCDeprecated.h \
   jni/../../Classes/Zorder.h jni/../../Classes/BackGround.h \
   jni/../../Classes/GameScene.h jni/../../Classes/CharacterSwitch.h \
+  jni/../../Classes/NativeLauncher.h \
   /Users/syunpeihayasi/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/random \
   /Users/syunpeihayasi/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/numeric
 
@@ -959,6 +960,8 @@ jni/../../Classes/BackGround.h:
 jni/../../Classes/GameScene.h:
 
 jni/../../Classes/CharacterSwitch.h:
+
+jni/../../Classes/NativeLauncher.h:
 
 /Users/syunpeihayasi/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/random:
 

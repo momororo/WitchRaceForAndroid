@@ -7,6 +7,7 @@
 //
 
 #include "Enemy.h"
+#include "NativeLauncher.h"
 #include <random>
 
 //初期値NULL
@@ -1513,8 +1514,9 @@ Sprite* Enemy::addEnemyParts4(int widthAndHeight){
 
 int Enemy::arc4random_uniform(int max){
 
-	std::mt19937 rand2(static_cast<unsigned int>(time(nullptr)));
-	std::uniform_int_distribution<int> dist(0, (max - 1));
-	return dist(rand2);
+//	std::mt19937 rand2(static_cast<unsigned int>(time(nullptr)));
+//	std::uniform_int_distribution<int> dist(0, (max - 1));
+//	return dist(rand2);
+	return NativeLauncher::getRandom(max);
 
 }

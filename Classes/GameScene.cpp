@@ -86,6 +86,12 @@ bool GameScene::init()
     
 
 //イベント系処理
+    /************** ボタンイベント(Android用)*************/
+    auto keyboardListener = EventListenerKeyboard::create();
+    keyboardListener->onKeyPressed = CC_CALLBACK_2(GameScene::onKeyPressed, this);
+
+    _eventDispatcher->addEventListenerWithSceneGraphPriority(keyboardListener, this);
+
     /**************　タッチイベント設定  ******************/
     
     //シングルタップ用リスナーを用意する
@@ -219,6 +225,18 @@ bool GameScene::onTouchBegan(Touch *touch, Event *unused_event){
     
 }
 
+void GameScene::onKeyPressed(EventKeyboard::KeyCode keyCode, Event* event) {
+	NativeLauncher::debugLog("onKeyPressed", "test");
+	if(keyCode == EventKeyboard::KeyCode::KEY_ESCAPE) {
+		//BACKキー押下時の処理
+		if (CharacterSwitch::getInstance()->getGameOverFlag()) {
+			CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("button70.mp3");
+			Scene* nextScene = CCTransitionFade::create(0.5f, LoadScene::createScene("TitleScene"));
+			Director::getInstance()->replaceScene(nextScene);
+		}
+	}
+}
+
 void GameScene::onTouchMoved(Touch *touch, Event *unused_event){
     
     
@@ -288,7 +306,7 @@ void GameScene::update( float frame )
 //クリアか判定
     //30で全障害物設置完了
     //全障害物を通り抜けたらゲームクリア
-    if(BackGround::getInstance()->getReplaceCount() > 30){
+    if(BackGround::getInstance()->getReplaceCount() > 2){
         //ゲームクリア
         this->makeGameClear();
     }
@@ -403,7 +421,8 @@ void GameScene::makeGameOver(){
     
     
     //「Game Over」ラベル作成
-    auto gameOverLabel = Label::createWithSystemFont("Game Over", "MagicSchoolOne", 150);
+    //
+    auto gameOverLabel = Label::createWithSystemFont("Game Over", "MagicSchoolOne.ttf", 150);
     gameOverLabel -> setPosition(Vec2(selfFrame.width/2,selfFrame.height*2/3));
     gameOverLabel -> setColor(Color3B::BLACK);
     gameOverOfLabel -> addChild(gameOverLabel);
@@ -487,7 +506,7 @@ void GameScene::makeGameClear(){
     
     
     //ゲームセンターにスコアを贈ろう
-    //NativeLauncher::postHighScore("WitchRacePointRanking", playPoint);
+    NativeLauncher::postHighScore("WitchRacePointRanking", playPoint);
     
     
 //終
@@ -602,7 +621,7 @@ void GameScene::makeGameClear(){
     
     
     //「Game Clear」ラベル作成
-    auto gameOverLabel = Label::createWithSystemFont("Game Clear", "MagicSchoolOne", 150);
+    auto gameOverLabel = Label::createWithSystemFont("Game Clear", "fonts/Marker Felt.ttf", 150);
     gameOverLabel -> setPosition(Vec2(selfFrame.width/2,selfFrame.height*2/3));
     gameOverLabel -> setColor(Color3B(255, 255, 177));
     gameOverLabel -> setGlobalZOrder(zOrderOfPauseLabel);

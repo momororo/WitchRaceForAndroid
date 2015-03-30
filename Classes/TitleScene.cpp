@@ -30,7 +30,10 @@ Scene *TitleScene::createScene(){
     auto scene = Scene::create();
     auto layer = TitleScene::create();
     scene -> addChild(layer);
-    
+    std::string tag = "cocos";
+    std::string msg = "test";
+    NativeLauncher::debugLog(tag.c_str(), msg.c_str());
+
     return scene;
     
 }
@@ -81,7 +84,7 @@ bool TitleScene::init(){
         SimpleAudioEngine::getInstance()->setBackgroundMusicVolume(0.1f);
         //BGM再生
         SimpleAudioEngine::getInstance()->playBackgroundMusic("title.mp3",true);
-    
+
     }
     
     
@@ -98,7 +101,7 @@ bool TitleScene::init(){
 //    this->scheduleUpdate();
     
     //MARK::ゲームセンターログイン
-    //GameCenterBridge::loginGameCenter();
+    NativeLauncher::loginGameCenter();
 
 
     
@@ -280,7 +283,7 @@ void TitleScene::setRankingBt(){
         //ボタン効果音
         SimpleAudioEngine::getInstance()->playEffect("button70.mp3");
         //ランキング表示
-        //NativeLauncher::openRanking();
+        NativeLauncher::openRanking();
         
         
     });
@@ -612,7 +615,8 @@ void TitleScene::update( float frame )
 
 int TitleScene::arc4random_uniform(int max){
 
-	std::mt19937 rand2(static_cast<unsigned int>(time(nullptr)));
-	std::uniform_int_distribution<int> dist(0, (max - 1));
-	return dist(rand2);
+//	std::mt19937 rand2(static_cast<unsigned int>(time(nullptr)));
+//	std::uniform_int_distribution<int> dist(0, (max - 1));
+//	return dist(rand2);
+	return NativeLauncher::getRandom(max);
 }
